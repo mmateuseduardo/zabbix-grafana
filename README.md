@@ -1,10 +1,10 @@
 ## <p align="center">zabbix-grafana :)
 <p align="center">💻 Essa pasta foi criada com o objetivo de armazenar templates tanto para o grafana quanto para o zabbix.
 <align="center"><br><br>
-<img align=left height="300" width="480"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-cluster.png"/>
-<img height="300" width="480"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-pve1.jpeg"/>
-<img align=left height="300" width="480"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/geral-v1.png"/>
-<img height="300" width="480"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/pppoe.PNG"/>
+<img align=left height="280" width="380"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-cluster.png"/>
+<img height="280" width="380"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-pve1.jpeg"/>
+<img align=left height="300" width="380"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/geral-v1.png"/>
+<img height="280" width="380"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/pppoe.PNG"/>
 
 Observação: Alguns dos templates de zabbix/grafana pode não ser compativel com sua versão, então antes de baixar peço por gentileza que valide a versão que está utilizando.
 
