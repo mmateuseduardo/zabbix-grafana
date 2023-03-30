@@ -1,7 +1,6 @@
 ## <p align="center">Geral :)
 <p align="center">💻 Template Geral<align="center"><br><br>
-<img height="300" width="620"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-cluster.png"/>
-<img height="300" width="620"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-pve1.jpeg"/>
+<img height="300" width="620"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/geral-v1.png"/>
 
 ## Sobre<br>
 A tela Geral-v1 contem somente o arquivo do grafana, essa tela deve ser modificado os itens de acordo com o nome dos dispositivos utilizado no seu ambiente.
