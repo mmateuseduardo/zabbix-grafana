@@ -1,4 +1,4 @@
-## <p align="center">script.backup.sh :)
+## <p align="center">Proxmox :)
 <p align="center">💻 Template do Proxmox<align="center"><br><br>
 <img height="300" width="620"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-cluster.png"/>
 <img height="300" width="620"  src="https://github.com/mmateuseduardo/zabbix-grafana/blob/main/img/proxmox-pve1.jpeg"/>
@@ -9,6 +9,11 @@ Este Template contem modificação no seu arquivo de zabbix e uma tela modelo pa
 ## ✅ Suporte<br> 
 Zabbix v7.2<br>
 Grafana v9.2.5<br>
+
+Observação: Para utilizar a função Disponivel no template do grafana, é necessário criar um item no zabbix com o nome do seu servidor cadastrador e o storage.
+No meu caso foi utilizado o nome do host como pve2 e do storage como Bunker1.
+
+last(//proxmox.node.maxdisk[pve2,Bunker1])-last(//proxmox.node.disk[pve2,Bunker1])
 
 ## 🤝 Contribuindo<br>
 No momento, aceitamos contribuições para este repositório.<br>
@@ -30,8 +35,3 @@ Link do Projeto: https://github.com/mmateuseduardo/script-backup<br>
 Este projeto está sob a licença do MIT.
 
 ```
-
-# zabbix-grafana
-Templates de Zabbix e Grafana - Customizado.
-
-last(//proxmox.node.maxdisk[pve2,Bunker1])-last(//proxmox.node.disk[pve2,Bunker1])
