@@ -1,0 +1,55 @@
+zabbix_export:
+  version: '6.4'
+  template_groups:
+    -
+      uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    -
+      uuid: 33dead6bca7b403d880c080e9eb01121
+      template: 'Status de Servico'
+      name: 'Status de Serviço'
+      groups:
+        -
+          name: Templates
+      items:
+        -
+          uuid: 8bf37156a7f041aabf286b785937d469
+          name: 'Status de Processo do Serviço'
+          key: 'system.run[./etc/zabbix/script/check_service_status.sh "zabbix-agent.service"]'
+          description: |
+            Altera o campo: zabbix-agent.service
+            para apache2.service
+            para cron.service
+            
+            Escolha o serviço que você deseja monitorar e altere.
+            
+            Nesse template o item mais importante seria esse, pois ele faz a função de rodar o script e trazer os resultados, outro ponto desse item é que se ele não encontrar o serviço no linux já vai retonar um erro, informando que o serviço desejado no linux não foi encontrado.
+            1 para OK
+            2 para error
+        -
+          uuid: bc7e43a14c964bc79d1cdf23de3afa88
+          name: 'Memória do Serviço'
+          key: 'vfs.file.regexp[/etc/zabbix/script/tmp/service_memory.txt,.*]'
+          delay: 5m
+          units: B
+          description: 'Esse item coleta a quantidade de memoria que está sendo consumida por determinado serviço ( processo) no linux.'
+          tags:
+            -
+              tag: 'Consulta de Serviço Customizado'
+              value: Serviço
+        -
+          uuid: b8a076d847144c0f8e26e3aee1e3169f
+          name: 'Status do Serviço'
+          key: 'vfs.file.regexp[/etc/zabbix/script/tmp/service_status.txt,.*]'
+          trends: '0'
+          value_type: CHAR
+          description: 'Esse item monitora o status do serviço, como por exemplo : rodando, pausado, com erro.'
+        -
+          uuid: ff80b9b2d6d14704995ddb65c742d07a
+          name: 'Uptime do Serviço'
+          key: 'vfs.file.regexp[/etc/zabbix/script/tmp/service_uptime.txt,.*]'
+          delay: 5m
+          trends: '0'
+          value_type: CHAR
+          description: 'Esse monitora o tempo de atividade do serviço.'
